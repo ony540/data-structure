@@ -2,9 +2,10 @@ import { BinarySearchTree } from './binarySearchTree.js';
 import { Queue } from './queue.js';
 import { Stack } from './stack.js';
 
-function bfs(tree) {
+export function bfs(tree) {
   const queue = new Queue();
-  queue.enqueue(bst.root);
+  queue.enqueue(tree.root);
+  console.log(tree);
   while (queue.length > 0) {
     const node = queue.dequeue(); // 젤처음들어간거 빼고
     console.log(node.value);
@@ -50,16 +51,16 @@ function postOrder(node) {
   console.log(node.value); //오른쪽에 콘솔찍기
 }
 
-const bst = new BinarySearchTree();
-bst.insert(4);
-bst.insert(2);
-bst.insert(6);
-bst.insert(1);
-bst.insert(3);
-bst.insert(5);
-bst.insert(7);
-bfs(bst);
-dfs(bst);
-bst;
-inOrder(bst.root);
-postOrder(bst.root);
+// const bst = new BinarySearchTree();
+// bst.insert(4);
+// bst.insert(2);
+// bst.insert(6);
+// bst.insert(1);
+// bst.insert(3);
+// bst.insert(5);
+// bst.insert(7);
+// bfs(bst);
+// dfs(bst);
+// bst;
+// inOrder(bst.root);
+// postOrder(bst.root);
